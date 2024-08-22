@@ -15,8 +15,8 @@ function App() {
       <Router>
         <Header/>
         <Routes>
-          <Route path="/" element={<Navigate to="/blogs" />} />
-          <Route path="/blogs" element={<BlogList />} />
+          <Route path="/" element={<Navigate to="/all-blogs" />} />
+          <Route path="/all-blogs" element={<BlogList />} />
           <Route path="/blog/:id" element={<ShowBlog />} />
           <Route path="/blogs/create" element={<CreateBlog />} />
           <Route path="/blog/:id/edit" element={<EditBlog />} />
