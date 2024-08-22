@@ -1,5 +1,5 @@
 import axios from 'axios';
-import  { axiosInstanceBlogCUD, axiosInstanceGetBlog } from '../api/axios';
+import  { axiosInstanceGetBlog } from '../api/axios';
 import { blogApi } from '../api/endpoints';
 
 export const getBlogs = () => axios.get(`${blogApi}`);
