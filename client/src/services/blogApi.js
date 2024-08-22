@@ -1,6 +1,7 @@
 import axios from 'axios';
+// axios instance 
 
-export const getBlogs = () => axios.get(process.env.REACT_APP_BLOG_API_URL);
+export const getBlogs = () => axios.get(`https://blog-app-mern-production.up.railway.app/blogs`);
 export const getBlogById = (id) => axios.get(`${process.env.REACT_APP_BLOG_API_URL}/${id}`);
 export const getBlogsByUserId = (userId) => axios.get(`${process.env.REACT_APP_BLOG_API_URL}/user/${userId}`);
 export const createBlog = (blogData) =>
