@@ -24,7 +24,7 @@ function EditBlogForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         await updateBlog(id, { title, content });
-        navigate('/');
+        navigate('/all-blogs');
       };
     return (
         <>

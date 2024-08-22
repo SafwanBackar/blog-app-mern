@@ -23,7 +23,10 @@ export default function Signup(){
   }
 
   const passwordCheck = (username, password, password2) =>{
-    if(username.length < 5) setUsernameError(true)
+    if(username.length < 5) {
+        setUsernameError(true)
+        return false
+    }
     return password === password2
   }
 
@@ -38,7 +41,7 @@ export default function Signup(){
             if (response && response.status === 201) {
                 const token = response.data.token;
                 localStorage.setItem('token', token);       
-                navigate('/');
+                navigate('/all-blogs');
             } else {
                 console.error('Login failed:', response.statusText);
             }

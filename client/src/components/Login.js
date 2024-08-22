@@ -21,7 +21,7 @@ export default function Login(){
             if (response && response.status === 200) {
                 const token = response.data.token;
                 localStorage.setItem('token', token);       
-                navigate('/');
+                navigate('/all-blogs');
             } else {
                 console.error('Login failed:', response.statusText);
             }

@@ -14,7 +14,7 @@ function BlogView() {
 
   const handleDelete = async () => {
     await deleteBlog(id, localStorage.getItem('token'));
-    navigate('/');
+    navigate('/all-blogs');
   };
   const userId = localStorage.getItem('token') ? jwtDecode(localStorage.getItem('token')) : ''
   return (

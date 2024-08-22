@@ -17,7 +17,7 @@ function CreateBlogForm() {
     const handleSubmit = async (e) => {
       e.preventDefault();
       await createBlog({ title, content });
-      navigate('/');
+      navigate('/all-blogs');
     };
   
     return (
